@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap5.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/2.0.1/css/buttons.bootstrap5.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.dataTables.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/rowgroup/2.3.0/css/rowGroup.dataTables.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/select/1.3.3/css/select.dataTables.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <title>HR Homepage</title>
+</head>
+
+<body>
+  <input type="checkbox" id="check">
+  <nav>
+    <div class="icon">DK</div>
+    <label for="check" class="bar">
+      <span class="fa fa-bars" id="bars" style="color:#FF8C05;"></span>
+      <span class="fa fa-times" id="times" style="color:#FF8C05;"></span>
+    </label>
+    <ol>
+      <li><a href="home.html"><i class="fa fa-home"></i> Home</a></li>
+      <li><a href="#happy"><i class="fa fa-user-plus"
+            aria-hidden="true"></i> Employee List</a></li>
+    </ol>
+  </nav>
+  <br>
+  <div class="container11">
+    <h2 class="d-none d-md-block text-center" style="color:#FF8C05;">Employee Registration Form</h2>
+    <form class="registerform" id="registrationForm">
+      <div class="form-group">
+        <label for="name" style="color:#FF8C05;">Name:</label>
+        <input type="text" class="form-control" id="name" required style="border-color:#FF8C05;">
+      </div>
+      <div class="form-group">
+        <label for="employeeId" style="color:#FF8C05;">Employee ID:</label>
+        <input type="text" class="form-control" id="employeeId" style="border-color:#FF8C05;" required>
+      </div>
+      <div class="form-group">
+        <label for="gender" style="color:#FF8C05;">Gender:</label>
+        <select class="form-control" id="gender" style="border-color:#FF8C05; margin-left: -0.09rem;" required>
+          <option value="">Select Gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="dob" style="color:#FF8C05;">DOB:</label>
+        <input type="text" class="form-control datepicker" id="dob" style="border-color:#FF8C05;" required>
+      </div>
+      <div class="form-group">
+        <label for="designation" style="color:#FF8C05;">Designation:</label>
+        <input type="text" class="form-control" id="designation" style="border-color:#FF8C05;" required>
+      </div>
+      <div class="form-group">
+        <label for="department" style="color:#FF8C05;">Department:</label>
+        <input type="text" class="form-control" id="department" style="border-color:#FF8C05;" required>
+      </div>
+      <div class="form-group">
+        <label for="appointmentDate" style="color:#FF8C05;">Appointment Date:</label>
+        <input type="text" class="form-control datepicker " id="appointmentDate" style="border-color:#FF8C05;" required>
+      </div><br>
+      <button type="submit" class="btn btn-primary"
+        style="border-color:#FF8C05;background-color:#FF8C05;">Submit</button>
+    </form>
+  </div>
+  <main id="happy">
+    <h2 style="color:#FF8C05;">Employee List</h2>
+    <section class="table" >
+      <table id="example" class="table table-striped table-bordered">
+
+        <thead >
+          <tr>
+            <th style="background-color: #FF8C05 !important;">Name</th>
+            <th style="background-color: #FF8C05 !important;">EmployeeID</th>
+            <th style="background-color: #FF8C05 !important;">Gender</th>
+            <th style="background-color: #FF8C05 !important;">DOB</th>
+            <th style="background-color: #FF8C05 !important;">Designation</th>
+            <th style="background-color: #FF8C05 !important;">Department</th>
+            <th style="background-color: #FF8C05 !important;">AppointmentDate</th>
+            <th style="background-color: #FF8C05 !important;">Action</th>
+            <!-- <th>Edit</th> -->
+          </tr>
+        </thead>
+        <tbody>
+          <!-- <tr class="table1">
+            <td class="name"></td>
+            <td class="EmployeeID"></td>
+            <td class="Gender"></td>
+            <td class="DOB"></td>
+            <td class="Designation"></td>
+            <td class="Department"></td>
+            <td class="AppointmentDate"></td>
+            <td class="delete"><a><i class="fa fa-trash"></i></a></td>
+            <td class="edit"><a><i class="fa fa-edit"></i></a></td> -->
+
+            <!-- <td><i class="fa fa-edit"></i> | <i class="fa fa-trash"></i></td> -->
+          <!-- </tr> -->
+        </tbody>
+      </table>
+      <!-- <div class="bottom-field">
+        <ul class="pagination">
+          <li class="prev"><a href="#" id="prev">&#139;</a></li>
+          
+          <li class="next"><a href="#" id="next">&#155;</a></li>
+        </ul>
+      </div> -->
+    </section>
+  </main>
+  <footer class="footer" style="background-color: #FF8C05;">
+    <div class="container1">
+      <div class="row">
+        <div class="footer-col">
+          <h4>DK</h4>
+          <ul>
+            <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i> DK Thimphu Bhutan</a></li>
+          </ul>
+        </div>
+        <div class="footer-col" >
+          <!-- style="margin-left: 30rem; margin-top: -5.5rem;" -->
+          <h4>Contact</h4>
+          <ul >
+            <li><a href="#">tshedorji98@gmail.com</a></li>
+            <!-- <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-whatsapp"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </div> -->
+          </ul>
+        </div>
+        <div class="footer-col">
+          <!-- style="margin-left: 60rem; margin-top: -9rem; -->
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
+            <li><a href="#happy"><i class="fa fa-user-plus" aria-hidden="true"></i> Employee List</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <p style="color: white;margin-left: 7%;margin-top: 3%;"><i class="fa fa-copyright" aria-hidden="true"></i> Copyright
+      DKProject2023. All Rights Reserved</p>
+  </footer>
+  <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script> -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap5.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/2.0.1/js/dataTables.buttons.min.js"></script>
+  <script src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
+  <script src="https://cdn.datatables.net/rowgroup/2.3.0/js/dataTables.rowGroup.min.js"></script>
+  <script src="https://cdn.datatables.net/select/1.3.3/js/dataTables.select.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+  <script src="js/home.js"></script>
+  <script type="module" src="./js/employeeDetails.js"></script>
+  <!-- <script src="js/main.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.3/axios.min.js"></script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.datepicker').datepicker({
+        format: 'dd/mm/yyyy',
+        autoclose: true
+      });
+    });
+  </script>
+</body>
+
+</html>

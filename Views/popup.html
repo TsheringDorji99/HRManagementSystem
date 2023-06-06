@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script src="https://kit.fontawesome.com/67c66657c7.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap5.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/2.0.1/css/buttons.bootstrap5.min.css">
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.dataTables.min.css">
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.datatables.net/rowgroup/2.3.0/css/rowGroup.dataTables.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/select/1.3.3/css/select.dataTables.min.css">
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+
+  <title>HRhomepage</title>
+
+</head>
+
+<body>
+  <div class="container11">
+
+    <h2 style="color:#FF8C05;">Employee Registration Form</h2>
+
+    <form class="registerform" id="registrationForm">
+      <div class="form-group">
+        <label for="name" style="color:#FF8C05;">Name:</label>
+        <input type="text" class="form-control" id="name" required style="border-color:#FF8C05;">
+      </div>
+      <div class="form-group">
+        <label for="employeeId" style="color:#FF8C05;">Employee ID:</label>
+        <input type="text" class="form-control" id="employeeId" style="border-color:#FF8C05;" required>
+      </div>
+      <div class="form-group">
+        <label for="gender" style="color:#FF8C05;">Gender:</label>
+        <select class="form-control" id="gender" style="border-color:#FF8C05; " required>
+          <option value="">Select Gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="dob" style="color:#FF8C05;">DOB:</label>
+        <input type="text" class="form-control datepicker " id="dob" style="border-color:#FF8C05;" required>
+      </div>
+      <div class="form-group">
+        <label for="designation" style="color:#FF8C05;">Designation:</label>
+        <input type="text" class="form-control" id="designation" style="border-color:#FF8C05;" required>
+      </div>
+      <div class="form-group">
+        <label for="department" style="color:#FF8C05;">Department:</label>
+        <input type="text" class="form-control" id="department" style="border-color:#FF8C05;" required>
+      </div>
+      <div class="form-group">
+        <label for="appointmentDate" style="color:#FF8C05;">Appointment Date:</label>
+        <input type="text" class="form-control datepicker" id="appointmentDate" style="border-color:#FF8C05;" required>
+      </div><br>
+      <button type="submit" class="btn btn-primary"
+        style="border-color:#FF8C05;background-color:#FF8C05;">Submit</button>
+    </form>
+  </div>
+  <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script> -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap5.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/2.0.1/js/dataTables.buttons.min.js"></script>
+  <script src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
+  <script src="https://cdn.datatables.net/rowgroup/2.3.0/js/dataTables.rowGroup.min.js"></script>
+  <script src="https://cdn.datatables.net/select/1.3.3/js/dataTables.select.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <!-- <script>
+    $(document).ready(function () {
+      $('#example').DataTable();
+    });
+  </script> -->
+  <script type="module" src="./js/popup.js"></script>
+  <!-- <script src="js/main.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.3/axios.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+<script>
+  $(document).ready(function () {
+    $('.datepicker').datepicker({
+      format: 'dd/mm/yyyy',
+      autoclose: true
+    });
+  });
+</script>
+
+  
+  <!-- <script>
+  // search content 
+    var search = document.getElementById("search");
+    search.onkeyup = e=>{
+      const text = e.target.value;
+      for(let i=0; i<tr.length; i++){
+        const matchText = tr[i].querySelectorAll("td")[0].innerText;
+        if(matchText.toLowerCase().indexOf(text.toLowerCase()) > -1){
+          tr[i].style.visibility = "visible";
+        }else{
+          tr[i].style.visibility= "collapse";
+        }
+      }
+    }
+  </script> -->
+</body>
+
+</html>
